@@ -1,0 +1,21 @@
+ function getRandom(max) {
+            return Math.floor(Math.random() * max);
+        }
+        var min = 1;
+        var max = prompt('数字炸弹02735A1C.png' + '\n ' + '请输入最大数');
+        var a = getRandom(max);
+        console.log(a);
+
+        while (true) {
+            var num = prompt('请输入' + min + '~' + max + '之间的数');
+            if (num > a) {
+                alert('猜大了');
+                max = num;
+            } else if (num < a) {
+                alert('猜小了');
+                min = num;
+            } else {
+                alert('恭喜你猜对啦！');
+                break;
+            }
+        }
